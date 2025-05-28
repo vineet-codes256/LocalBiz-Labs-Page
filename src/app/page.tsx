@@ -1,29 +1,31 @@
-"use client";
-// Refined Landing Page for LOCALBIZLABS.com with Premium White Theme and Smooth Animations
+'use client';
+
+// Responsive Landing Page for LOCALBIZLABS.com with Orange Text, Elegant White Design, and Cross-Platform Support
 // Stack: React + TailwindCSS + Framer Motion (for animations)
 
+import React from 'react';
 import { motion } from 'framer-motion';
 
 export default function LocalBizLabs() {
   return (
-    <main className="min-h-screen bg-white text-slate-900 font-sans">
+    <main className="min-h-screen bg-white text-orange-600 font-sans">
       <section className="max-w-6xl mx-auto py-24 px-6 text-center">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-5xl md:text-6xl font-extrabold text-slate-800 mb-6"
+          className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6"
         >
-          LOCALBIZLABS
+          LocalBiz Labs
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto mb-10"
+          className="text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto mb-10"
         >
-          Get Your Business Online — Fast & Affordable. Smart Websites • Booking Tools • Google Maps • Branding
+          Smart tech for real-world businesses. Custom websites, apps, SEO, automation, and more.
         </motion.p>
 
         <motion.div
@@ -35,7 +37,7 @@ export default function LocalBizLabs() {
           {['Websites', 'Mobile Apps', 'E-Commerce', 'Local SEO', 'Automation'].map((item, index) => (
             <span
               key={index}
-              className="bg-slate-800 text-white px-5 py-2 rounded-full text-sm shadow-md hover:scale-105 transition-transform"
+              className="border border-orange-500 text-orange-600 px-4 py-2 rounded-full text-sm shadow-md hover:bg-orange-600 hover:text-white hover:scale-115 transition-all"
             >
               {item}
             </span>
@@ -44,8 +46,19 @@ export default function LocalBizLabs() {
 
         <motion.a
           href="mailto:hello@localbizlabs.com"
-          whileHover={{ scale: 1.05 }}
-          className="inline-block bg-slate-900 text-white font-bold py-3 px-8 rounded-full shadow-lg"
+          whileHover={{
+            scale: 1.05,
+            transition: {
+              duration: 0.6,
+              repeat: Infinity,
+              repeatType: 'reverse',
+              ease: 'easeInOut'
+            }
+          }}
+          className="inline-block bg-orange-600 text-white font-bold py-3 px-6 sm:px-8 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.8 }}
         >
           Let&apos;s Build Your Website →
         </motion.a>
@@ -56,9 +69,9 @@ export default function LocalBizLabs() {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl font-bold text-slate-800 mb-6"
+          className="text-2xl sm:text-3xl font-bold mb-6"
         >
-          Why LocalBizLabs?
+          Why LocalBiz Labs?
         </motion.h2>
 
         <motion.ul
@@ -71,14 +84,13 @@ export default function LocalBizLabs() {
               }
             }
           }}
-          className="list-disc list-inside text-lg text-slate-700 space-y-4"
+          className="list-disc list-inside text-base sm:text-lg space-y-4"
         >
           {[ 
-            'Tailor-made digital storefronts with seamless UX/UI.',
+            'We build tailor-made digital storefronts with seamless UX/UI.',
             'End-to-end automation: bookings, orders, payments — all handled.',
             'SEO tools and digital marketing to boost your local reach.',
-            'Real-time analytics and support to scale as you grow.',
-            'Mobile-optimized websites delivered in just 3–5 days.'
+            'Real-time analytics and support to scale as you grow.'
           ].map((text, idx) => (
             <motion.li
               key={idx}
@@ -92,7 +104,7 @@ export default function LocalBizLabs() {
         </motion.ul>
       </section>
 
-      <footer className="text-center text-sm text-slate-400 py-10">
+      <footer className="text-center text-xs sm:text-sm text-orange-500 py-10">
         © {new Date().getFullYear()} LOCALBIZLABS.com — A brand of Rawat Innovations Pvt. Ltd. | CIN: U62011UT2025PTC019256
       </footer>
     </main>
