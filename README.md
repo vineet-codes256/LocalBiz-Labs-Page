@@ -78,4 +78,4 @@ See [Next.js deployment documentation](https://nextjs.org/docs/app/building-your
 
 ---
 
-© {new Date().getFullYear()} LOCALBIZLABS.com — A brand of Rawat Innovations Pvt. Ltd. | CIN: U62011UT2025PTC019256
+© 2025 LOCALBIZLABS.com — A brand of Rawat Innovations Pvt. Ltd. | CIN: U62011UT2025PTC019256 | All rights reserved.
