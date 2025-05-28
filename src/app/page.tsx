@@ -9,12 +9,21 @@ import { motion } from 'framer-motion';
 export default function LocalBizLabs() {
   return (
     <main className="min-h-screen bg-white text-orange-600 font-sans">
-      <section className="max-w-6xl mx-auto py-24 px-6 text-center">
+      <section className="max-w-6xl mx-auto py-20 px-6 text-center">
+        <motion.img
+          src="/logo.png"
+          alt="LocalBizLabs Logo"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mx-auto mb-8 w-24 h-24 object-contain"
+        />
+
         <motion.h1
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6"
+          className="text-4xl md:text-5xl font-semibold text-orange-600 mb-4"
         >
           LocalBiz Labs
         </motion.h1>
@@ -22,8 +31,8 @@ export default function LocalBizLabs() {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-          className="text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto mb-10"
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="text-lg md:text-xl max-w-2xl mx-auto text-gray-600 mb-10"
         >
           Smart tech for real-world businesses. Custom websites, apps, SEO, automation, and more.
         </motion.p>
@@ -104,7 +113,7 @@ export default function LocalBizLabs() {
         </motion.ul>
       </section>
 
-      <footer className="text-center text-xs sm:text-sm text-orange-500 py-10">
+      <footer className="text-center text-sm text-gray-400 py-10">
         © {new Date().getFullYear()} LOCALBIZLABS.com — A brand of Rawat Innovations Pvt. Ltd. | CIN: U62011UT2025PTC019256
       </footer>
     </main>
