@@ -95,7 +95,7 @@ export default function LocalBizLabs() {
           }}
           className="list-disc list-inside text-base sm:text-lg space-y-4"
         >
-          {[ 
+          {[
             'We build tailor-made digital storefronts with seamless UX/UI.',
             'End-to-end automation: bookings, orders, payments — all handled.',
             'SEO tools and digital marketing to boost your local reach.',
@@ -115,6 +115,9 @@ export default function LocalBizLabs() {
 
       <footer className="text-center text-sm text-gray-400 py-10">
         © {new Date().getFullYear()} LOCALBIZLABS.com — A brand of Rawat Innovations Pvt. Ltd. | CIN: U62011UT2025PTC019256
+        <div className="mt-4 text-gray-500">
+          <strong>Contact us:</strong> hello@localbizlabs.com
+        </div>
       </footer>
     </main>
   );
