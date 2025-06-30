@@ -1,14 +1,45 @@
 'use client';
-
-// Responsive Landing Page for LOCALBIZLABS.com with Orange Text, Elegant White Design, and Cross-Platform Support
-// Stack: React + TailwindCSS + Framer Motion (for animations)
-
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 export default function LocalBizLabs() {
+  // Toast state
+  const [toast, setToast] = useState<{ message: string; type: 'success' | 'error'; visible: boolean }>({ message: '', type: 'success', visible: false });
+
+  // Rate limit state
+  const [lastSubmitTime, setLastSubmitTime] = useState<number | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const RATE_LIMIT_SECONDS = 60;
+
+  // Show toast helper
+  const showToast = (message: string, type: 'success' | 'error' = 'success') => {
+    setToast({ message, type, visible: true });
+    setTimeout(() => setToast(t => ({ ...t, visible: false })), 3500);
+  };
+
+  // Email validation helper
+  const isValidEmail = (email: string) => {
+    // Simple regex for demonstration; can be improved
+    // Improved regex: checks for valid characters, domain, and TLD (2-24 chars)
+    return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,24}$/.test(email);
+  };
+
+
+
   return (
     <main className="min-h-screen bg-white text-orange-600 font-sans">
+      {/* Toast Notification */}
+      {toast.visible && (
+        <div
+          className={`fixed top-6 left-1/2 z-50 -translate-x-1/2 px-6 py-3 rounded shadow-lg text-white transition-all duration-300
+            ${toast.type === 'success' ? 'bg-green-600' : 'bg-red-600'}
+          `}
+          role="alert"
+        >
+          {toast.message}
+        </div>
+      )}
+
       <section className="max-w-6xl mx-auto py-20 px-6 text-center">
         <motion.img
           src="/logo.png"
@@ -251,7 +282,46 @@ export default function LocalBizLabs() {
         >
           Get in Touch
         </motion.h2>
-        <form className="bg-white rounded-lg shadow-md p-6 space-y-4 border border-orange-100">
+        <form
+          className="bg-white rounded-lg shadow-md p-6 space-y-4 border border-orange-100"
+          onSubmit={async (e) => {
+            e.preventDefault();
+            if (isSubmitting) return;
+            const now = Date.now();
+            if (lastSubmitTime && now - lastSubmitTime < RATE_LIMIT_SECONDS * 1000) {
+              showToast(`Please wait ${Math.ceil((RATE_LIMIT_SECONDS * 1000 - (now - lastSubmitTime)) / 1000)}s before submitting again.`, 'error');
+              return;
+            }
+            const form = e.target as HTMLFormElement;
+            const name = (form.elements.namedItem('name') as HTMLInputElement)?.value;
+            const email = (form.elements.namedItem('email') as HTMLInputElement)?.value;
+            const message = (form.elements.namedItem('message') as HTMLTextAreaElement)?.value;
+            if (!isValidEmail(email)) {
+              showToast('Please enter a valid email address.', 'error');
+              return;
+            }
+            setIsSubmitting(true);
+            const data = { name, email, message };
+            try {
+              const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data),
+              });
+              if (res.ok) {
+                showToast('Thank you! Your message has been sent.', 'success');
+                form.reset();
+                setLastSubmitTime(Date.now());
+              } else {
+                showToast('Sorry, there was a problem sending your message.', 'error');
+              }
+            } catch {
+              showToast('Sorry, there was a problem sending your message.', 'error');
+            } finally {
+              setIsSubmitting(false);
+            }
+          }}
+        >
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
             <input type="text" id="name" name="name" required className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-400" />
@@ -264,7 +334,20 @@ export default function LocalBizLabs() {
             <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
             <textarea id="message" name="message" rows={4} required className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-400"></textarea>
           </div>
-          <button type="submit" className="w-full bg-orange-600 text-white font-bold py-3 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300">Send Message</button>
+          <button
+            type="submit"
+            disabled={
+              isSubmitting ||
+              (!!lastSubmitTime && Date.now() - lastSubmitTime < RATE_LIMIT_SECONDS * 1000)
+            }
+            className={`w-full bg-orange-600 text-white font-bold py-3 rounded-full shadow-lg transition-colors duration-300 ${
+              isSubmitting || (!!lastSubmitTime && Date.now() - lastSubmitTime < RATE_LIMIT_SECONDS * 1000)
+                ? 'opacity-60 cursor-not-allowed'
+                : 'hover:bg-green-600'
+            }`}
+          >
+            Send Message
+          </button>
         </form>
       </section>
 
@@ -281,8 +364,21 @@ export default function LocalBizLabs() {
 
       <footer className="text-center text-sm text-gray-400 py-10">
         © {new Date().getFullYear()} LOCALBIZLABS.com, A brand of Rawat Innovations Pvt. Ltd. | CIN: U62011UT2025PTC019256
-        <div className="mt-4 text-gray-500">
-          <strong>Contact us:</strong> hello@localbizlabs.com
+        <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-2 text-gray-500">
+          <span><strong>Contact us:</strong> hello@localbizlabs.com</span>
+          <a
+            href="https://www.instagram.com/localbizlabs/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="ml-2 inline-flex items-center hover:text-orange-600 transition-colors"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-instagram">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
+            </svg>
+          </a>
         </div>
       </footer>
     </main>
