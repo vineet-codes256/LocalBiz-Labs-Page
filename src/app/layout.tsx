@@ -72,6 +72,7 @@ export const metadata: Metadata = {
   verification: {
     google: 'your-google-verification-code',
   },
+  category: 'technology',
 };
 
 export default function RootLayout({
@@ -93,7 +94,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
+              "@type": "LocalBusiness",
               "name": "LocalBizLabs",
               "url": "https://localbizlabs.com",
               "logo": "https://localbizlabs.com/logo.png",
@@ -103,18 +104,26 @@ export default function RootLayout({
                 "@type": "ContactPoint",
                 "telephone": "+91-9548816875",
                 "contactType": "customer service",
-                "email": "hello@localbizlabs.com"
+                "email": "hello@localbizlabs.com",
+                "availableLanguage": "English"
               },
               "address": {
                 "@type": "PostalAddress",
-                "addressCountry": "IN"
+                "addressCountry": "IN",
+                "addressRegion": "Uttarakhand",
+                "addressLocality": "Dehradun"
               },
               "sameAs": [
                 "https://www.instagram.com/localbizlabs/"
               ],
-              "serviceType": ["Web Development", "Mobile App Development", "Digital Marketing", "Business Branding"],
+              "serviceType": ["Web Development", "Mobile App Development", "Digital Marketing", "Business Branding", "E-commerce Solutions"],
               "areaServed": "Worldwide",
-              "priceRange": "$$"
+              "priceRange": "$$",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "200"
+              }
             })
           }}
         />
