@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "LocalBizLabs",
     images: [
       {
-        url: "/LocalBiz_Labs.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "LocalBizLabs - Digital Solutions for Local Businesses",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "LocalBizLabs – Get Your Business Online Fast & Affordable",
     description: "Transform your local business with professional websites, mobile apps, booking systems, and digital marketing.",
-    images: ["/LocalBiz_Labs.png"],
+    images: ["/og-image.png"],
     creator: "@localbizlabs",
   },
   robots: {
