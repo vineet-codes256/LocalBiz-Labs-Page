@@ -2,9 +2,9 @@ import { Resend } from 'resend';
 
 export async function POST(req) {
     try {
-        const { name, email, message } = await req.json();
+        const { name, phone, businessType, email, message } = await req.json();
 
-        if (!name || !email || !message) {
+        if (!name || !phone || !businessType || !email || !message) {
             return new Response(JSON.stringify({ error: 'All fields are required.' }), { status: 400 });
         }
 
@@ -17,6 +17,8 @@ export async function POST(req) {
             html: `
         <div style="font-family:sans-serif; font-size:16px;">
           <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Phone:</strong> ${phone}</p>
+          <p><strong>Business Type:</strong> ${businessType}</p>
           <p><strong>Email:</strong> ${email}</p>
           <p><strong>Message:</strong><br/>${message}</p>
         </div>
