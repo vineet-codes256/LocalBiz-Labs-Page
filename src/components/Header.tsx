@@ -25,10 +25,10 @@ export default function Header() {
                     className="bg-orange-600 text-white px-3 py-2 sm:px-4 rounded-full font-semibold hover:bg-orange-700 transition-colors text-sm sm:text-base whitespace-nowrap"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    aria-label="Get free business audit"
+                    aria-label="Get free business analysis"
                 >
-                    <span className="hidden sm:inline">Get Free Audit</span>
-                    <span className="sm:hidden">Free Audit</span>
+                    <span className="hidden sm:inline">Get Free Business Analysis</span>
+                    <span className="sm:hidden">Free Analysis</span>
                 </motion.a>
             </div>
         </header>

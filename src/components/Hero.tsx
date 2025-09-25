@@ -36,7 +36,7 @@ export default function Hero({ isDark }: HeroProps) {
                     className="inline-block bg-gradient-to-r from-orange-600 to-orange-700 text-white font-bold py-3 px-6 sm:px-8 rounded-full shadow-lg hover:from-orange-700 hover:to-orange-800 transition-all duration-300"
                     whileHover={{ scale: 1.05 }}
                 >
-                    Book Free Audit
+                    Book a Free Consultation
                 </motion.a>
                 <motion.a
                     href="#case-studies"
