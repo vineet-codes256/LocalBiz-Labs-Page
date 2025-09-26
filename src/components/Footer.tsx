@@ -37,6 +37,11 @@ export default function Footer() {
                                     <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
                                 </svg>
                             </a>
+                            <a href="https://x.com/LocalBiz_labs" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-orange-600 transition-colors" aria-label="Follow us on X (Twitter)">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                </svg>
+                            </a>
                             <a href="mailto:hello@localbizlabs.com" className="text-gray-600 hover:text-orange-600 transition-colors" aria-label="Send us an email">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeLinejoin="round" strokeLinecap="round" strokeWidth=".25" aria-hidden="true">
                                     <path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z" />

@@ -114,7 +114,8 @@ export default function RootLayout({
                 "addressLocality": "Dehradun"
               },
               "sameAs": [
-                "https://www.instagram.com/localbizlabs/"
+                "https://www.instagram.com/localbizlabs/",
+                "https://x.com/LocalBiz_labs"
               ],
               "serviceType": ["Web Development", "Mobile App Development", "Digital Marketing", "Business Branding", "E-commerce Solutions"],
               "areaServed": "Worldwide",
