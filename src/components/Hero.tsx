@@ -13,7 +13,7 @@ export default function Hero({ isDark }: HeroProps) {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-orange-600 mb-4 bg-gradient-to-r from-orange-600 to-orange-800 bg-clip-text text-transparent leading-tight"
             >
-                Get Your Business Online in 7 Days – Fast, Affordable, Professional.
+                Get Your Local Business Online in 7 Days – Build Website, Web Design, Apps & More.
             </motion.h1>
 
             <motion.p
@@ -22,7 +22,7 @@ export default function Hero({ isDark }: HeroProps) {
                 transition={{ delay: 0.4, duration: 0.6 }}
                 className={`text-lg md:text-xl max-w-2xl mx-auto ${isDark ? 'text-gray-300' : 'text-gray-700'} mb-10 drop-shadow-sm`}
             >
-                Websites, apps, and automations that bring you more customers and save you time.
+                Professional website builder for local businesses. Create stunning websites, mobile apps, and digital solutions that attract more customers.
             </motion.p>
 
             <motion.div

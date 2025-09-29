@@ -25,8 +25,8 @@ function Services() {
                     className="bg-white/60 backdrop-blur-sm border border-white/20 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all text-center"
                 >
                     <div className="text-4xl mb-4">🌐</div>
-                    <h3 className="font-bold mb-2">Websites</h3>
-                    <p className="text-sm text-gray-600">Mobile-friendly, Google-optimized, and ready in a week.</p>
+                    <h3 className="font-bold mb-2">Website Builder & Web Design</h3>
+                    <p className="text-sm text-gray-600">Build website with our professional web design services. Mobile-friendly, Google-optimized sites ready in a week.</p>
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
