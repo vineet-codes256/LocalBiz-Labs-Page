@@ -26,8 +26,8 @@ function Pricing() {
             <motion.div
                 initial="hidden"
                 whileInView="visible"
-                variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
-                className="grid md:grid-cols-3 gap-8 mb-8"
+                variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
+                className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
             >
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -37,39 +37,65 @@ function Pricing() {
                 >
                     <h3 className="text-xl font-bold mb-2">Starter</h3>
                     <div className="text-3xl font-bold text-orange-600 mb-4">₹5,999</div>
-                    <ul className="text-sm text-gray-600 space-y-2 mb-4">
-                        <li>1-page website like this one</li>
-                        <li>Mobile-friendly</li>
-                        <li>1 week delivery</li>
+                    <ul className="text-sm text-gray-600 space-y-2 mb-4 text-left">
+                        <li>✓ 1-page professional website</li>
+                        <li>✓ Mobile-responsive design</li>
+                        <li>✓ Google-optimized SEO</li>
+                        <li>✓ 1 week delivery</li>
+                        <li>✓ 1 month free support</li>
+                        <li>✓ 2 rounds of revisions</li>
                     </ul>
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
-                    className="bg-white/80 backdrop-blur-sm border border-white/20 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all text-center relative"
+                    className="bg-white/80 backdrop-blur-sm border border-white/20 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all text-center"
                 >
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-orange-600 text-white px-3 py-1 rounded-full text-xs">Popular</div>
-                    <h3 className="text-xl font-bold mb-2">Growth</h3>
-                    <div className="text-3xl font-bold text-orange-600 mb-4">₹25,000+</div>
-                    <ul className="text-sm text-gray-600 space-y-2 mb-4">
-                        <li>Dynamic website</li>
-                        <li>E-commerce</li>
-                        <li>CMS</li>
+                    <h3 className="text-xl font-bold mb-2">Business</h3>
+                    <div className="text-3xl font-bold text-orange-600 mb-4">₹12,999</div>
+                    <ul className="text-sm text-gray-600 space-y-2 mb-4 text-left">
+                        <li>✓ Multi-page website (up to 5 pages)</li>
+                        <li>✓ Contact forms & booking system</li>
+                        <li>✓ Google My Business integration</li>
+                        <li>✓ Social media links</li>
+                        <li>✓ 2 weeks delivery</li>
+                        <li>✓ 3 months free support</li>
                     </ul>
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
+                    className="bg-white/80 backdrop-blur-sm border border-white/20 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all text-center relative"
+                >
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-orange-600 text-white px-3 py-1 rounded-full text-xs">Popular</div>
+                    <h3 className="text-xl font-bold mb-2">Growth</h3>
+                    <div className="text-3xl font-bold text-orange-600 mb-4">₹25,000+</div>
+                    <ul className="text-sm text-gray-600 space-y-2 mb-4 text-left">
+                        <li>✓ E-commerce store (up to 50 products)</li>
+                        <li>✓ Payment gateway integration</li>
+                        <li>✓ Inventory management</li>
+                        <li>✓ Order tracking system</li>
+                        <li>✓ Admin dashboard</li>
+                        <li>✓ 6 months free maintenance</li>
+                    </ul>
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
                     className="bg-white/80 backdrop-blur-sm border border-white/20 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all text-center"
                 >
                     <h3 className="text-xl font-bold mb-2">Pro</h3>
                     <div className="text-3xl font-bold text-orange-600 mb-4">₹1.5L+</div>
-                    <ul className="text-sm text-gray-600 space-y-2 mb-4">
-                        <li>Custom apps</li>
-                        <li>Automation</li>
-                        <li>AI integrations</li>
+                    <ul className="text-sm text-gray-600 space-y-2 mb-4 text-left">
+                        <li>✓ Custom mobile apps</li>
+                        <li>✓ WhatsApp bot automation</li>
+                        <li>✓ AI chatbot integration</li>
+                        <li>✓ Advanced analytics</li>
+                        <li>✓ Custom workflow tools</li>
+                        <li>✓ 1 year premium support</li>
                     </ul>
                 </motion.div>
             </motion.div>
