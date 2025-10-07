@@ -1,4 +1,4 @@
-# LocalBizLabs – Get Your Business Online Fast & Affordable
+# LocalBizLabs - Get Your Business Online Fast & Affordable
 
 This is the official website for [LocalBizLabs](https://localbizlabs.com), built with [Next.js](https://nextjs.org), [Tailwind CSS](https://tailwindcss.com), and [Framer Motion](https://www.framer.com/motion/).  
 LocalBizLabs helps local businesses launch a professional online presence quickly and affordably, with smart websites, booking tools, Google Maps integration, branding, and more.

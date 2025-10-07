@@ -20,7 +20,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "LocalBizLabs – Build Website | Local Biz Web Design & Website Builder | Get Online Fast",
+  title: "LocalBizLabs - Build Website | Local Biz Web Design & Website Builder | Get Online Fast",
   description: "Build your local business website with our professional web design services. Best website builder for small businesses. Create stunning websites, mobile apps, and digital solutions. Free consultation. Get online in 7 days.",
   keywords: "build website, local biz, web design, website builder, website maker, best website builder, free website builder, local business website, small business app, digital marketing, booking system, Google Maps optimization, business branding, e-commerce website, mobile app development",
   authors: [{ name: "LocalBizLabs Team" }],
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "LocalBizLabs – Build Website | Local Biz Web Design & Website Builder",
+    title: "LocalBizLabs - Build Website | Local Biz Web Design & Website Builder",
     description: "Transform your local business with professional websites, mobile apps, booking systems, and digital marketing. Trusted by 200+ businesses. Best website builder for local biz.",
     url: "https://localbizlabs.com",
     siteName: "LocalBizLabs",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "LocalBizLabs – Build Website | Local Biz Web Design & Website Builder",
+    title: "LocalBizLabs - Build Website | Local Biz Web Design & Website Builder",
     description: "Build your local business website with our professional web design services. Best website builder for small businesses. Get online in 7 days.",
     images: ["/og-image.png"],
     creator: "@localbizlabs",
@@ -177,7 +177,7 @@ export default function RootLayout({
                   "name": "How fast can I go live?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Starter sites go live in 7 days. Advanced builds 3–6 weeks."
+                    "text": "Starter sites go live in 7 days. Advanced builds 3-6 weeks."
                   }
                 },
                 {

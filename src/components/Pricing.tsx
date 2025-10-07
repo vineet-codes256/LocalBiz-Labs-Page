@@ -20,7 +20,7 @@ function Pricing() {
                 transition={{ delay: 0.2, duration: 0.6 }}
                 className="bg-red-500 text-white text-center py-2 px-4 rounded-full mb-10 mx-auto max-w-md"
             >
-                Introductory Offer – First 10 Clients Get 50% Off
+                Introductory Offer - First 10 Clients Get 50% Off
             </motion.div>
 
             <motion.div

@@ -22,7 +22,7 @@ export default function FAQ() {
                 </motion.div>
                 <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="bg-white/60 backdrop-blur-sm rounded p-4 border border-white/20 shadow-md">
                     <div className="font-semibold text-orange-700 mb-1">How fast can I go live?</div>
-                    <div className="text-gray-700">Starter sites go live in 7 days. Advanced builds 3–6 weeks.</div>
+                    <div className="text-gray-700">Starter sites go live in 7 days. Advanced builds 3-6 weeks.</div>
                 </motion.div>
                 <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="bg-white/60 backdrop-blur-sm rounded p-4 border border-white/20 shadow-md">
                     <div className="font-semibold text-orange-700 mb-1">Do you provide training?</div>
